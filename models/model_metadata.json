@@ -1,0 +1,46 @@
+{
+  "model_name": "XGBoost",
+  "feature_columns": [
+    "daily_return",
+    "portfolio_return",
+    "5_day_return",
+    "10_day_return",
+    "20_day_return",
+    "rolling_volatility_5",
+    "rolling_volatility_10",
+    "rolling_volatility_20",
+    "moving_average_5",
+    "moving_average_20",
+    "moving_average_ratio",
+    "momentum_5",
+    "momentum_10",
+    "momentum_20",
+    "max_drawdown_20",
+    "volume_change",
+    "volatility_proxy",
+    "yield_change",
+    "market_correlation",
+    "beta_proxy"
+  ],
+  "metrics": {
+    "accuracy": 0.9553072625698324,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "confusion_matrix": [
+      [
+        684,
+        11
+      ],
+      [
+        21,
+        0
+      ]
+    ],
+    "roc_auc": 0.6158958547447757
+  },
+  "train_rows": 2862,
+  "test_rows": 716,
+  "target": "high_drawdown_risk",
+  "selection_metric": "roc_auc_if_available_else_f1"
+}
