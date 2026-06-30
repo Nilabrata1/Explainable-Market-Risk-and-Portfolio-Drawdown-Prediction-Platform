@@ -47,6 +47,7 @@ portfolio-risk-mlops-platform/
   Dockerfile
   docker-compose.yml
   requirements.txt
+  requirements-full.txt
   run_project.py
 ```
 
@@ -55,7 +56,7 @@ portfolio-risk-mlops-platform/
 ```bash
 python -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
-pip install -r requirements.txt
+pip install -r requirements-full.txt
 python run_project.py
 pytest
 ```
@@ -124,7 +125,7 @@ streamlit_app/app.py
 
 4. Deploy the app.
 
-This repository includes a Streamlit-specific dependency file at `streamlit_app/requirements.txt`, a root `.streamlit/config.toml`, and lightweight model/report artifacts for an immediately usable dashboard. If artifacts are missing in a fresh deployment, the home page includes a **Build demo model artifacts** button.
+This repository keeps `requirements.txt` lean for Streamlit Cloud and `requirements-full.txt` for the full local/API/MLflow stack. It also includes `runtime.txt`, a root `.streamlit/config.toml`, and lightweight model/report artifacts for an immediately usable dashboard. If artifacts are missing in a fresh deployment, the home page includes a **Build demo model artifacts** button.
 
 ## MLflow Tracking
 
